@@ -1,6 +1,4 @@
-Berikut adalah `README.md` dalam format **Markdown** yang menarik dan siap Anda copy-paste ke GitHub:
 
-```markdown
 # 🚀 Parallel Matrix Multiplication with MPI & Docker
 
 > Perkalian Matriks Secara Paralel dengan Algoritma SUMMA menggunakan MPI dan Docker

@@ -1,0 +1,41 @@
+services:
+  master:
+    build: .
+    container_name: master
+    networks:
+      mpi_net:
+        ipv4_address: 172.28.0.2
+    volumes:
+      - .:/mnt/shared
+    tty: true
+
+  worker1:
+    build: .
+    container_name: worker1
+    networks:
+      mpi_net:
+        ipv4_address: 172.28.0.3
+    tty: true
+
+  worker2:
+    build: .
+    container_name: worker2
+    networks:
+      mpi_net:
+        ipv4_address: 172.28.0.4
+    tty: true
+
+  worker3:
+    build: .
+    container_name: worker3
+    networks:
+      mpi_net:
+        ipv4_address: 172.28.0.5
+    tty: true
+
+networks:
+  mpi_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
